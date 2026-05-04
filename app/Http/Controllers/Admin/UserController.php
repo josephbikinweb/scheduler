@@ -3,12 +3,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    const globalTitle = 'User';
-    const routeTitle  = 'user';
+    const globalTitle = 'Users';
+    const routeTitle  = 'users';
 
     public function index()
     {
@@ -17,6 +16,7 @@ class UserController extends Controller
         $data  = [
             'title' => $title,
             'route' => $route,
+            'users' => User::all(),
         ];
         return view('main.' . $route . '.' . $route, $data);
     }
@@ -26,15 +26,33 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $title = self::globalTitle . ' Create';
+        $route = self::routeTitle;
+        $data  = [
+            'title' => $title,
+            'route' => $route,
+        ];
+        return view('main.' . $route . '.' . $route . '-input', $data);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
-        //
+        $title = self::globalTitle . ' Create';
+        $route = self::routeTitle;
+        $data  = $request->validated();
+
+        $slugService = new SlugService();
+
+        $data['slug'] = $slugService->createSlug(
+            User::class,
+            $data['user_name']
+        );
+
+        User::create($data);
+        return Redirect::route($route . '.index')->with('success', $route . '-stored');
     }
 
     /**
@@ -42,7 +60,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+
     }
 
     /**
@@ -50,15 +68,27 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        $title = self::globalTitle;
+        $route = self::routeTitle;
+        $data  = [
+            'title' => $title,
+            'route' => $route,
+            'user'  => $user,
+        ];
+        return view('main.' . $route . '.' . $route . '-input', $data);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, User $user)
+    public function update(UserRequest $request, User $user)
     {
-        //
+        $title = self::globalTitle;
+        $route = self::routeTitle;
+        $data  = $request->validated();
+
+        $user->update($data);
+        return Redirect::route($route . '.index')->with('success', $route . '-updated');
     }
 
     /**
@@ -66,6 +96,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->forcedelete();
+        return Redirect::route(self::routeTitle . '.index')->with('success', self::routeTitle . '-deleted');
     }
 }

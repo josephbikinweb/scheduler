@@ -1,0 +1,160 @@
+:root {
+    --royal-blue: 58, 51, 121;
+    --navy-blue: 20, 32, 46;
+    --midnight-blue: 43, 66, 87;
+    --blue-gray: 136, 169, 195;
+
+    --maron: 110, 13, 37;
+    --cream: 220, 171, 107;
+    --gold: 119, 78, 36;
+    /* card */
+    --salmon: 255, 7, 110;
+    --orange: 255, 77, 7;
+    --green: 0, 189, 63;
+    --light-green: 35, 245, 234;
+    --dark-orange: 249, 115, 22;
+
+    --black: 15, 15, 15;
+    --white: 255, 255, 255;
+    --yellow: 241, 196, 15;
+    --blue: 10, 129, 241;
+
+    /* bootstrap */
+    --bs-primary: 78, 115, 223;
+    --bs-warning: 246, 194, 62;
+    --bs-info: 54, 185, 204;
+    --bs-success: 28, 200, 138;
+    --bs-danger: 231, 74, 59;
+
+    /* --wa-color: 37, 211, 102; */
+    --wa-color: 7, 94, 84;
+
+    /* THEME */
+    --main-color: var(--royal-blue);
+    --secondary-color: var(--blue-gray);
+    /* END OF THEME */
+
+    --main-text: var(--royal-blue);
+    --secondary-text: var(--white);
+    --third-text: var(--black);
+
+    --main-bg: var(--royal-blue);
+    --secondary-bg: var(--blue-gray);
+
+    --btn-bg: var(--royal-blue);
+    --btn-bg-secondary: var(--yellow);
+
+    --poppins-font: 'Poppins', sans-serif;
+    --jakarta-font: 'Plus Jakarta Sans', sans-serif;
+}
+/* Sidebar */
+.main-text {
+    color: rgba(var(--main-text), 1);
+}
+.main-text-transparent {
+    color: rgba(var(--main-text), 0.6);
+}
+.text-orange {
+    color: rgba(var(--orange), 1) !important;
+}
+
+.text-salmon {
+    color: rgba(var(--salmon), 1) !important;
+}
+.text-green {
+    color: rgba(var(--green), 1) !important;
+}
+/* WA color */
+.wa-color {
+    background-color: rgba(var(--wa-color), 1) !important;
+    color: rgba(var(--white), 1) !important;
+    color: rgb(7, 94, 84);
+}
+
+/* background */
+.main-bg {
+    background-color: rgba(var(--main-bg), 1) !important;
+}
+.bg-main-transparent {
+    background-color: rgba(var(--main-bg), 0.5) !important;
+}
+.bg-orange {
+    background-color: rgba(var(--orange), 1) !important;
+}
+.secondary-bg {
+    background-color: rgba(var(--secondary-bg), 0.3) !important;
+}
+.bg-blue-gray {
+    background-color: rgba(var(--blue-gray), 1) !important;
+}
+.bg-blue-gray-transparent {
+    background-color: rgba(var(--blue-gray), 0.8) !important;
+}
+.bg-blue {
+    background-color: rgba(var(--blue), 1) !important;
+}
+.bg-blue-transparent {
+    background-color: rgba(var(--blue), 0.3) !important;
+}
+/* .bg-green {
+    background-color: rgba(var(--green), 1) !important;
+} */
+.bg-green-transparent {
+    background-color: rgba(var(--green), 0.3) !important;
+}
+.bg-lectio {
+    /* background-color: rgba(var(--royal-blue), 0.7) !important; */
+    background-color: rgba(var(--blue-gray), 1) !important;
+}
+.bg-orange {
+    background-color: rgba(var(--orange), 1) !important;
+    color: rgba(var(--white), 1) !important;
+}
+
+.bg-salmon {
+    background-color: rgba(var(--salmon), 1) !important;
+    color: rgba(var(--white), 1) !important;
+}
+.bg-green {
+    background-color: rgba(var(--green), 1) !important;
+    color: rgba(var(--white), 1) !important;
+}
+
+/* button */
+.main-btn {
+    background-color: rgba(var(--main-bg), 1);
+    color: rgba(var(--secondary-text), 1);
+    transition: all 0.3s ease-in-out;
+}
+.main-btn:hover {
+    background-color: rgba(var(--yellow), 0.6);
+    color: rgba(var(--main-text), 1);
+    transition: all 0.3s ease-in-out;
+}
+.btn-orange {
+    background-color: rgba(var(--orange), 1) !important;
+    color: rgba(var(--white), 1) !important;
+}
+
+.btn-salmon {
+    background-color: rgba(var(--salmon), 1) !important;
+    color: rgba(var(--white), 1) !important;
+}
+.btn-green {
+    background-color: rgba(var(--green), 1) !important;
+    color: rgba(var(--white), 1) !important;
+}
+/* text */
+.text-orange {
+    color: rgba(var(--orange), 1) !important;
+}
+/* badge */
+.badge-custom {
+    padding: 3px 8px !important;
+    margin-right: 3px;
+    border-radius: 6px !important;
+}
+.badge-orange {
+    background-color: rgba(var(--orange), 1) !important;
+    color: rgba(var(--white), 1) !important;
+}

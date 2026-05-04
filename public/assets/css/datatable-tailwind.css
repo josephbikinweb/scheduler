@@ -1,0 +1,33 @@
+@import url('./color.css');
+
+.dark .dt-search input,
+.dark .dt-search label,
+.dark .dt-length select,
+.dark .dt-length label,
+.dark .dt-info,
+.dark .dt-paging {
+    color: rgba(var(--white), 1) !important;
+}
+
+.dark .dt-search input,
+.dark .dt-length select {
+    border: 1px solid rgba(var(--white), 0.4) !important;
+    border-radius: 4px;
+}
+
+.dark .dt-length option {
+    background-color: rgba(var(--black), 1);
+}
+
+.dark .pagination {
+    display: flex;
+    justify-content: flex-end;
+}
+.dark .dt-paging button {
+    border: 1px solid rgba(var(--white), 0.4) !important;
+    padding: 5px 10px !important;
+}
+
+.dark input[type='date'] {
+    color-scheme: dark;
+}

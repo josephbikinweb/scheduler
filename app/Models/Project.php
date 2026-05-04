@@ -4,17 +4,19 @@ namespace App\Models;
 use App\Enums\ProjectStatus;
 use App\Models\Techstack;
 use App\Models\Version;
+use App\Traits\TracksUserActions;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Project extends Model
 {
-    use HasUlids, SoftDeletes;
+    use HasUlids, SoftDeletes, TracksUserActions;
 
     protected $fillable = [
         'project_name',
         'project_description',
+        'slug',
         'start_date',
         'end_date',
         'deploy_date',

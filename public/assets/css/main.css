@@ -1,0 +1,18 @@
+@import url('./color.css');
+
+.dark input[type='date'] {
+    color-scheme: dark;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+.select2-container--tailwindcss-4.select2-container--focus .select2-selection--single {
+    border-color: var(--color-gray-900, oklch(51.1% 0.262 276.966)) !important;
+
+    --tw-ring-color: var(--color-gray-900, oklch(51.1% 0.262 276.966)) !important;
+}
+.dark .select2-container--tailwindcss-4.select2-container--focus .select2-selection--single {
+    border-color: var(--color-gray-200, oklch(92.8% 0.006 264.531)) !important;
+    --tw-ring-color: var(--color-gray-200, oklch(92.8% 0.006 264.531)) !important;
+}
